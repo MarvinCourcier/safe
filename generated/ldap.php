@@ -1244,3 +1244,4 @@ function ldap_unbind($ldap): void
         throw LdapException::createFromPhpError();
     }
 }
+

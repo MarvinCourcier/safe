@@ -1219,3 +1219,4 @@ function db2_set_option($resource, array $options, int $type): void
         throw IbmDb2Exception::createFromPhpError();
     }
 }
+

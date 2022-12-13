@@ -2184,7 +2184,19 @@ function imagerotate($image, float $angle, int $background_color, bool $ignore_t
 /**
  * imagesavealpha sets the flag which determines whether to retain
  * full alpha channel information (as opposed to single-color transparency)
- * when saving PNG images.
+ * when saving images.
+ * This is only supported for image formats which support full alpha channel information,
+ * i.e. PNG, WebP and AVIF.
+ *
+ *
+ * imagesavealpha is only meaningful for PNG
+ * images, since the full alpha channel is always saved for WebP
+ * and AVIF. It is not recommended to rely on this behavior,
+ * as it may change in the future. Thus, imagesavealpha
+ * should be called deliberately also for WebP and
+ * AVIF images.
+ *
+ *
  *
  * Alphablending has to be disabled (imagealphablending($im, false))
  * to retain the alpha-channel in the first place.
@@ -2973,3 +2985,4 @@ function png2wbmp(string $pngname, string $wbmpname, int $dest_height, int $dest
         throw ImageException::createFromPhpError();
     }
 }
+

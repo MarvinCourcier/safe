@@ -173,7 +173,7 @@ function cli_set_process_title(string $title): void
  *
  *
  *
- * whether PHP has been built with (experimental) ZTS (Zend Thread Safety)
+ * whether PHP has been built with ZTS (Zend Thread Safety)
  * support or not
  *
  *
@@ -688,3 +688,4 @@ function set_time_limit(int $seconds): void
         throw InfoException::createFromPhpError();
     }
 }
+

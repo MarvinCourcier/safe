@@ -3039,6 +3039,7 @@ function curl_multi_setopt(\CurlMultiHandle $multi_handle, int $option, $value):
  *
  * Option
  * Set value to
+ * Notes
  *
  *
  *
@@ -3053,6 +3054,7 @@ function curl_multi_setopt(\CurlMultiHandle $multi_handle, int $option, $value):
  *
  *
  *
+ *
  * CURLOPT_PASSWDFUNCTION
  *
  * A callback accepting three parameters.
@@ -3060,6 +3062,7 @@ function curl_multi_setopt(\CurlMultiHandle $multi_handle, int $option, $value):
  * string containing a password prompt, and the third is the maximum
  * password length. Return the string containing the password.
  *
+ * Removed as of PHP 7.3.0.
  *
  *
  * CURLOPT_PROGRESSFUNCTION
@@ -3086,6 +3089,7 @@ function curl_multi_setopt(\CurlMultiHandle $multi_handle, int $option, $value):
  *
  *
  *
+ *
  * CURLOPT_READFUNCTION
  *
  * A callback accepting three parameters.
@@ -3099,6 +3103,7 @@ function curl_multi_setopt(\CurlMultiHandle $multi_handle, int $option, $value):
  *
  *
  *
+ *
  * CURLOPT_WRITEFUNCTION
  *
  * A callback accepting two parameters.
@@ -3106,6 +3111,7 @@ function curl_multi_setopt(\CurlMultiHandle $multi_handle, int $option, $value):
  * string with the data to be written. The data must be saved by
  * this callback. It must return the exact number of bytes written
  * or the transfer will be aborted with an error.
+ *
  *
  *
  *
@@ -3311,3 +3317,4 @@ function curl_upkeep(\CurlHandle $handle): void
         throw CurlException::createFromPhpError($handle);
     }
 }
+
